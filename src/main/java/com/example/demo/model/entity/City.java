@@ -1,15 +1,10 @@
 package com.example.demo.model.entity;
 
 import lombok.*;
-//import org.hibernate.validator.constraints.Range;
-//import org.hibernate.validator.constraints.NotEmpty;
-//import org.hibernate.validator.constraints.Range;
 import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
-//import javax.validation.constraints.NotNull;
-//import javax.validation.constraints.NotEmpty;
 
 @Data
 @Entity
