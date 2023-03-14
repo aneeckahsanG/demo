@@ -37,18 +37,7 @@ public class CityService implements ICityService {
 
         return cities;
     }
-
-//    @Override
-//    public City update(Long id, City city) {
-//        Optional<City> cityData = cityRepository.findById(id);
-//        if(cityData.isPresent()){
-//            City _city = cityData.get();
-//            _city.setName(city.getName());
-//            _city.setPopulation(city.getPopulation());
-//            return cityRepository.save(_city);
-//        }
-//        throw new NoDataFoundException();
-//    }
+    
     @Override
     public City update(Long id, City city) {
 
@@ -60,12 +49,8 @@ public class CityService implements ICityService {
         }).orElseThrow(() -> new NoDataFoundException());
     }
 
-
-
     @Override
     public void delete(Long id) {
-//        Optional<City> cityData = cityRepository.findById(id);
-//        if(cityData.isPresent()){
         if(cityRepository.existsById(id)){
             cityRepository.deleteById(id);
             return;
