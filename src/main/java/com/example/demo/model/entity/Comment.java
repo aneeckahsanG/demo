@@ -1,7 +1,6 @@
 package com.example.demo.model.entity;
 
 import javax.persistence.*;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -27,22 +26,8 @@ public class Comment {
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
     private Tutorial tutorial;
-    // getters and setters
-
 
     public Comment(String content) {
         this.content = content;
     }
-//
-//    public void setTutorial(Tutorial tutorial) {
-//        this.tutorial = tutorial;
-//    }
-//
-//    public String getContent() {
-//        return content;
-//    }
-//
-//    public void setContent(String content) {
-//        this.content = content;
-//    }
 }
